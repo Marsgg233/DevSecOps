@@ -36,7 +36,7 @@ docker compose version
 
 В проекте используются два сервиса:
 
-* `db` — база данных MariaDB;
+* `db` - база данных MariaDB;
 * `wordpress` - сайт WordPress.
 
 Для хранения данных используются два Docker volume:
