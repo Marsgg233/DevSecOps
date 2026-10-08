@@ -1,4 +1,4 @@
-```python
+python
 import os
 from fastapi import FastAPI, HTTPException
 import bcrypt
@@ -30,4 +30,3 @@ def hash_password(password: str = "default_secret"):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8080)
-```
