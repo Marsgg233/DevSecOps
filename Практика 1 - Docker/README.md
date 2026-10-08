@@ -27,7 +27,7 @@ docker run --rm hello-world
 
 Docker успешно запустился и вывел сообщение `Hello from Docker!`.
 
-![Проверка WSL и Docker](01_docker_check.png)
+![Проверка WSL и Docker](screenshots/01_docker_check.png)
 
 ---
 
@@ -51,7 +51,7 @@ docker ps
 
 Открылся стандартный сайт Nginx с надписью `Welcome to nginx!`.
 
-![Welcome to nginx](02_nginx.png)
+![Welcome to nginx](screenshots/02_nginx.png)
 
 Также проверил страницу, которой не существует:
 
@@ -59,7 +59,7 @@ docker ps
 
 В ответ получил ошибку `404 Not Found`.
 
-![Ошибка 404](03_404.png)
+![Ошибка 404](screenshots/03_404.png)
 
 После этого посмотрел логи контейнера:
 
@@ -91,7 +91,7 @@ docker start lab-web
 docker ps
 ```
 
-![Остановка и повторный запуск](04_restart.png)
+![Остановка и повторный запуск](screenshots/04_restart.png)
 
 ---
 
@@ -118,7 +118,7 @@ FROM nginx:stable-alpine
 COPY index.html /usr/share/nginx/html/index.html
 ```
 
-![Файлы index.html и Dockerfile](05_files.png)
+![Файлы index.html и Dockerfile](screenshots/05_files.png)
 
 ---
 
@@ -138,7 +138,7 @@ docker build -t student-site:v1 .
 
 На странице появилась первая версия моего сайта.
 
-![Первая версия сайта](06_v1.png)
+![Первая версия сайта](screenshots/06_v1.png)
 
 ---
 
@@ -162,7 +162,7 @@ docker build -t student-site:v2 .
 
 `http://localhost:8081`
 
-![Вторая версия сайта](07_v2.png)
+![Вторая версия сайта](screenshots/07_v2.png)
 
 ---
 
@@ -180,7 +180,7 @@ docker run -d --name my-copy -p 127.0.0.1:8082:80 student-site:v2
 
 На странице также отображается вторая версия моего сайта.
 
-![Вторая версия сайта на порту 8082](08_v2_8082.png)
+![Вторая версия сайта на порту 8082](screenshots/08_v2_8082.png)
 
 Затем остановил первый контейнер.
 
@@ -188,7 +188,7 @@ docker run -d --name my-copy -p 127.0.0.1:8082:80 student-site:v2
 
 Таким образом, я проверил, что контейнеры работают независимо друг от друга.
 
-![Независимая работа контейнеров](09_independent.png)
+![Независимая работа контейнеров](screenshots/09_independent.png)
 
 ---
 
@@ -212,4 +212,3 @@ docker run -d --name my-copy -p 127.0.0.1:8082:80 student-site:v2
 * `Dockerfile`
 * `index.html`
 * `result.txt`
-
